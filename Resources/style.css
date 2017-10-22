@@ -1,0 +1,173 @@
+/*   General CSS   */
+body {
+	font-size: 18px;
+	font-family: Helvetica;	
+}
+.container {
+	display: flex;
+    align-items: center;
+    width: 960px;
+	margin: 0 auto;
+}
+/*   Header   */
+.company {
+	background-color: black;
+	color: white;
+}
+.company img {
+	height: 1.5rem;
+	padding: 0rem 1rem 0rem 0.5rem;
+}
+.name {
+	padding: 0.66rem 0rem;
+}
+/*   Banner   */
+.banner {
+	background-image:url(Images/Banner.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;	
+	height: 30rem;
+}
+.headline {
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+	width: 20em;
+	position: relative;
+	top: 9em;
+	padding: 2em 3em;
+}
+.headline h4 {
+	font-size: 1rem;
+	font-weight: bold;
+	margin-bottom: 0.25rem;
+}
+.headline h1 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+/*   Navigation Bar   */
+nav {
+	background-color: firebrick;
+	color: white;
+}
+nav ul{
+	display: flex;
+	justify-content: space-between;
+	padding: 0.75rem 0rem;
+}
+nav a {
+	text-decoration:none;
+	color:white;
+}
+nav a:hover {
+	color: yellow;
+}
+/*   Main Content   */
+.products {
+	display: flex;
+	justify-content: space-between;
+	margin: 3em 0 0 0;	
+}
+.product {
+	width: 30%;
+}
+.product-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 9rem;
+	padding: 2rem 1rem;
+	border: 4px solid black;
+}
+.description {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	color: white;
+	padding: 5px 0;
+}
+.businessInfo {
+	display: flex;
+	justify-content: space-between;
+	margin: 3em 0 0 0;
+	width:100%;
+}
+.info {
+	width: 35%;
+}
+.title {
+	display: block;
+	background-color: black;
+	color: white;
+	padding: 1em 2em;
+}
+.data {
+	margin-top: 0.25em;	
+}
+/*   Footer Content   */
+footer {
+	display: flex;
+	margin-top: 4rem;
+	height:5rem;
+	background-color: black;
+	color: white;
+}
+/*   Media Query  */
+@media only screen and (min-width: 1024px) {
+	.mobileNav {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  .headline {
+	  top: 21em;
+  }
+  .headline h4 {
+	  font-size: 0.75rem;
+  }
+  .headline h1 {
+	  font-size: 1rem;
+  }
+ .hide {
+	  display: none;
+  }
+ .mobileNav {
+	  display: block;
+	  text-align: center;
+  }
+ .glasses {
+   	  display: none;
+  }
+
+  .product {
+	  width: 47%;
+  }	  
+}
+@media only screen and (max-width: 470px) {
+	.banner {
+	 	height: 15rem;
+	}
+	.headline {
+		top: 8rem;
+	}
+	.headline h4 {
+	font-size: 0.77rem;
+	margin-bottom: 0.25rem;
+	}
+	.headline h1 {
+	font-size: 1rem;
+	}
+	.copyright {
+		display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+		
+	
+}

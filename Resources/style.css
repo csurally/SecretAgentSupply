@@ -4,9 +4,7 @@ body {
 	font-family: Helvetica;	
 }
 .container {
-	display: flex;
-    align-items: center;
-    width: 960px;
+	max-width: 960px;
 	margin: 0 auto;
 }
 /*   Header   */
@@ -63,6 +61,9 @@ nav a {
 nav a:hover {
 	color: yellow;
 }
+.mobileNav {
+  display: none; //Keeps hiden the mobile navigation links
+}
 /*   Main Content   */
 .products {
 	display: flex;
@@ -88,11 +89,15 @@ nav a:hover {
 	color: white;
 	padding: 5px 0;
 }
+.product-image img {
+	width: 8em;
+}
+
+/*  Business Info   */
 .businessInfo {
 	display: flex;
 	justify-content: space-between;
 	margin: 3em 0 0 0;
-	width:100%;
 }
 .info {
 	width: 35%;
@@ -103,27 +108,20 @@ nav a:hover {
 	color: white;
 	padding: 1em 2em;
 }
-.data {
-	margin-top: 0.25em;	
-}
+
 /*   Footer Content   */
 footer {
-	display: flex;
 	margin-top: 4rem;
 	height:5rem;
 	background-color: black;
 	color: white;
-}
-/*   Media Query  */
-@media only screen and (min-width: 1024px) {
-	.mobileNav {
-		display: none;
-	}
+	padding-top: 2em;
 }
 
+/*   Media Query  */
 @media only screen and (max-width: 1024px) {
   body {
-    font-size: 16px;
+      font-size: 16px;
   }
   .headline {
 	  top: 21em;
@@ -134,10 +132,10 @@ footer {
   .headline h1 {
 	  font-size: 1rem;
   }
- .hide {
+  nav ul {
 	  display: none;
   }
- .mobileNav {
+  .mobileNav {
 	  display: block;
 	  text-align: center;
   }
@@ -157,17 +155,34 @@ footer {
 		top: 8rem;
 	}
 	.headline h4 {
-	font-size: 0.77rem;
-	margin-bottom: 0.25rem;
+		font-size: 0.77rem;
+		margin-bottom: 0.25rem;
 	}
 	.headline h1 {
-	font-size: 1rem;
+		font-size: 1rem;
 	}
-	.copyright {
-		display: flex;
-	justify-content: center;
-	align-items: center;
+	.watch {
+   	  display: none;
+    }
+    .product {
+	  width: 90%;
+	  margin-left: 2rem;
+    }	
+    .businessInfo {
+	 flex-direction: column;
+    }
+    .businessInfo .info {
+	  width: 90%;
+	  margin: 0.5rem auto;
+    }
+	footer {
+		text-align: center;
 	}
-		
-	
+	.company .name {
+		display: none;
+	}
+	.company img {
+		text-align: center;
+	}
 }
+
